@@ -1,0 +1,403 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #333333;
+    font-size: .80em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #000000;
+}
+
+a:link, a:visited
+{
+    color: #006699;
+}
+
+a:hover
+{
+    color: #3399FF;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+    margin-left: 40px;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #333333;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.8em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.4em;
+}
+
+h4
+{
+    font-size: 1.2em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 1000px;
+    background-color: #FFFFFF;
+    margin: 20px auto 0px auto;
+    border: medium none #CF9B14;
+}
+
+.header
+{
+    border: medium none #CF9B14;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.header h1
+{
+    border: medium none #CF9B14;
+    font-weight: 800;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #FFFFCC;
+    line-height: 2em;
+    font-size: 2em;
+    width: 497px;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+   
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    border: thin none #CF9B14;
+    color: #333333;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: right;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #0D0E2C;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 8px 4px 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px 5px 0px 5px;
+    padding: 0px 8px 0px 8px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    border-style: none solid solid solid;
+    border-width: 1px 1px thick 1px;
+    border-color: #0D0E2C #0D0E2C #122F8B #0D0E2C;
+    background-color: #0D0E2C;
+    color: #FFFFFF;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #0D0E2C;
+    color: #C0C0C0;
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-bottom-color: #FFCC00;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: thin solid #FFCC00;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: 101px;
+}
+.CoolButton {
+display: block;
+border: 1px solid;
+border-color: #aaa #000 #000 #aaa;
+width: 8em;
+background: #fc0;
+}
+
+a:hover
+{
+position: relative;
+top: 1px;
+left: 1px;
+border-color: #000 #aaa #aaa #000;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: #C0C0C0;
+}
+
+.loginDisplay a:visited
+{
+    color: #666666;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+input.formInputText  {
+    padding: 3px;
+    margin-right: 5px;
+    margin-left:20px;
+        position: relative;
+    top: 0px;
+    left: 0px;
+    height: 26px;
+}
+
+.label  {
+    text-align: left;
+    margin-right: 10px;
+    position: relative;  
+    float: left;
+    width: 155px;
+    height: 28px;
+    left: 0px;
+    top: 0px;
+}
+.formInputDropBox  {
+  padding: 5px;
+    margin-right: 5px;
+    margin-left:30px;
+ position: relative;
+    top: 0px;
+    left: 0px;
+}
+.searchLabel  {
+    text-align: right;
+    margin-right: 2px;
+    position: relative;
+    float: right;
+    width: 155px;
+    top: 114px;
+    left: -3px;
+}
+input.SearchformInputText  {
+    padding: 3px;
+    margin-right: 5px;
+    float: right;
+    margin-left:20px;
+        position: relative;
+    top: 109px;
+    left: -1px;
+}
+.searchButton
+{
+     float: right;
+    text-align: center;
+     padding-left: 10px;
+    padding-right: 10px;
+     margin-right: 5px;
+     margin-left:5px;
+     position: relative;
+    top: 110px;
+    left: -3px;
+}
+.button {
+ display: inline-block;
+ outline: none;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ font: 14px/100% Arial, Helvetica, sans-serif;
+ padding: .5em 2em .55em;
+ -webkit-border-radius: .5em; 
+ -moz-border-radius: .5em;
+ 
+ -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+ -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+ 
+}
+.button:hover {
+ text-decoration: none;
+}
+.button:active {
+ position: relative;
+ top: 1px;
+}
+

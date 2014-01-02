@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ATS.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <script type="text/javascript" src="<%# ResolveUrl("~/Scripts/jquery-1.4.1.js") %>"></script>
+
+
+    <title>ATS IMS</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"> 
+    </asp:ContentPlaceHolder>
+     
+</head>
+
+
+
+
+<body>
+    <form id="form1" runat="server">
+      <div class="page">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+         <asp:ScriptManager ID="ScriptManager1" runat="server"><Scripts><asp:ScriptReference Path="~/Scripts/jquery-1.4.1.js" /></Scripts></asp:ScriptManager>
+        <div class="header">
+            <div class="title">
+                <h1>
+                    ATS Inventory Management System
+                </h1>
+            </div>
+            
+                           <div class="loginDisplay">
+                <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+
+
+            <div>
+            <asp:Button ID="SearchButton" runat="server" onclick="Button1_Click" Text="Search" 
+                    CssClass="searchButton" UseSubmitBehavior="False" />
+                <asp:TextBox ID="SearchTextBox" runat="server" CssClass="SearchformInputText" 
+                    Width="100px"></asp:TextBox>
+                <asp:Label ID="SearchLabel" runat="server" Text="Search:" CssClass="searchLabel" 
+                    ForeColor="#CCCCCC"></asp:Label></div>
+            
+            
+
+          
+
+            <div class="clear hideSkiplink">
+            
+
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+                      Font-Size="0.8em" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+                  </asp:SiteMapPath>
+      
+                <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false" 
+                    Orientation="Horizontal" DataSourceID="SiteMapDataSource1" 
+                    StaticDisplayLevels="2">
+                </asp:Menu> 
+                  
+              </div>
+        </div>
+
+
+              
+
+
+
+        <div class="content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+       
+        </asp:ContentPlaceHolder>
+        </div>
+        
+        <div class="footer" style="background-color: #808080">
+        Academic Technology<br />
+        PO Box 70284<br />
+        Johnson City, TN 37614<br />
+        423-439-8611<br />
+        ats@etsu.edu
+        </div>
+    </div>
+    </form>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F83BA9C-55F9-415A-9D1E-77AE3DD5B696}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATS</RootNamespace>
+    <AssemblyName>ATS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="ApplicationServices-Deployment" Order="1" Description="If Deployment from Package/Publish SQL does not work, run the ATS_TABLE_SCRIPT.sql Scriptr">
+          <Destination Path="" />
+          <Object Type="dbFullSql" Enabled="True">
+            <PreSource Path="data source=.\SQLEXPRESS%3bIntegrated Security=SSPI%3bAttachDBFilename=|DataDirectory|\aspnetdb.mdf%3bUser Instance=true" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Release\AutoScripts\ApplicationServices-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+          <Object Type="dbFullSql">
+            <Source Path="..\..\ATS_TABLE_SCRIPT.sql" Transacted="False" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AccountManagement\ChangePW.aspx" />
+    <Content Include="AccountManagement\CreateAccount.aspx" />
+    <Content Include="AccountManagement\Database1_log.LDF" />
+    <Content Include="AccountManagement\Default.aspx" />
+    <Content Include="AccountManagement\ModifyUserAccount.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Checkinouts\Checkin.aspx" />
+    <Content Include="Checkinouts\Checkout.aspx" />
+    <Content Include="Checkinouts\Default.aspx" />
+    <Content Include="Holds\Default.aspx" />
+    <Content Include="Holds\ManageHolds.aspx" />
+    <Content Include="Holds\RemoveHold.aspx" />
+    <Content Include="Inventory\AddCategory.aspx" />
+    <Content Include="Inventory\Default.aspx" />
+    <Content Include="Inventory\Delete\Default.aspx" />
+    <Content Include="Inventory\Delete\MarkDeleted.aspx" />
+    <Content Include="Inventory\Delete\MarkSurplus.aspx" />
+    <Content Include="Inventory\Delete\RemoveEquipment.aspx" />
+    <Content Include="Inventory\MarkLSD.aspx" />
+    <Content Include="Inventory\ModifyCategory.aspx" />
+    <Content Include="Inventory\ModifyEquipment.aspx" />
+    <Content Include="Inventory\ScrAddEquipment.aspx" />
+    <Content Include="Request\Confirm.aspx" />
+    <Content Include="Request\Default.aspx" />
+    <Content Include="Request\Hold.aspx" />
+    <Content Include="Request\Renew.aspx" />
+    <Content Include="Request\Reserve.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="Reports\Default.aspx" />
+    <Content Include="Reports\EquipmentHoldsReport.aspx" />
+    <Content Include="Reports\EquipmentItemsReport.aspx" />
+    <Content Include="Reports\EquipmentReportByDate.aspx" />
+    <Content Include="Reports\StatisticalReport.aspx" />
+    <Content Include="Search\SeachForSpecificItem.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManagement\ChangePW.aspx.cs">
+      <DependentUpon>ChangePW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountManagement\ChangePW.aspx.designer.cs">
+      <DependentUpon>ChangePW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManagement\CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountManagement\CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManagement\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountManagement\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManagement\ModifyUserAccount.aspx.cs">
+      <DependentUpon>ModifyUserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountManagement\ModifyUserAccount.aspx.designer.cs">
+      <DependentUpon>ModifyUserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ATSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Checkinouts\Checkin.aspx.cs">
+      <DependentUpon>Checkin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkinouts\Checkin.aspx.designer.cs">
+      <DependentUpon>Checkin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkinouts\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkinouts\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkinouts\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkinouts\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Holds\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Holds\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Holds\ManageHolds.aspx.cs">
+      <DependentUpon>ManageHolds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Holds\ManageHolds.aspx.designer.cs">
+      <DependentUpon>ManageHolds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Holds\RemoveHold.aspx.cs">
+      <DependentUpon>RemoveHold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Holds\RemoveHold.aspx.designer.cs">
+      <DependentUpon>RemoveHold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Delete\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\Delete\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Delete\MarkDeleted.aspx.cs">
+      <DependentUpon>MarkDeleted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\Delete\MarkDeleted.aspx.designer.cs">
+      <DependentUpon>MarkDeleted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Delete\MarkSurplus.aspx.cs">
+      <DependentUpon>MarkSurplus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\Delete\MarkSurplus.aspx.designer.cs">
+      <DependentUpon>MarkSurplus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Delete\RemoveEquipment.aspx.cs">
+      <DependentUpon>RemoveEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\Delete\RemoveEquipment.aspx.designer.cs">
+      <DependentUpon>RemoveEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MarkLSD.aspx.cs">
+      <DependentUpon>MarkLSD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\MarkLSD.aspx.designer.cs">
+      <DependentUpon>MarkLSD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ModifyCategory.aspx.cs">
+      <DependentUpon>ModifyCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\ModifyCategory.aspx.designer.cs">
+      <DependentUpon>ModifyCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ModifyEquipment.aspx.cs">
+      <DependentUpon>ModifyEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\ModifyEquipment.aspx.designer.cs">
+      <DependentUpon>ModifyEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ScrAddEquipment.aspx.cs">
+      <DependentUpon>ScrAddEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\ScrAddEquipment.aspx.designer.cs">
+      <DependentUpon>ScrAddEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Hold.aspx.cs">
+      <DependentUpon>Hold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request\Hold.aspx.designer.cs">
+      <DependentUpon>Hold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Renew.aspx.cs">
+      <DependentUpon>Renew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request\Renew.aspx.designer.cs">
+      <DependentUpon>Renew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Reserve.aspx.cs">
+      <DependentUpon>Reserve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request\Reserve.aspx.designer.cs">
+      <DependentUpon>Reserve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EquipmentHoldsReport.aspx.cs">
+      <DependentUpon>EquipmentHoldsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\EquipmentHoldsReport.aspx.designer.cs">
+      <DependentUpon>EquipmentHoldsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EquipmentItemsReport.aspx.cs">
+      <DependentUpon>EquipmentItemsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\EquipmentItemsReport.aspx.designer.cs">
+      <DependentUpon>EquipmentItemsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EquipmentReportByDate.aspx.cs">
+      <DependentUpon>EquipmentReportByDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\EquipmentReportByDate.aspx.designer.cs">
+      <DependentUpon>EquipmentReportByDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StatisticalReport.aspx.cs">
+      <DependentUpon>StatisticalReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StatisticalReport.aspx.designer.cs">
+      <DependentUpon>StatisticalReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SeachForSpecificItem.aspx.cs">
+      <DependentUpon>SeachForSpecificItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SeachForSpecificItem.aspx.designer.cs">
+      <DependentUpon>SeachForSpecificItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountManagement\web.config" />
+    <None Include="ATSDataSet.xsc">
+      <DependentUpon>ATSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ATSDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATSDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ATSDataSet.xss">
+      <DependentUpon>ATSDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="Inventory\web.config" />
+    <Content Include="Checkinouts\web.config" />
+    <Content Include="Holds\web.config" />
+    <Content Include="Reports\web.config" />
+    <Content Include="Search\web.config" />
+    <Content Include="Request\Web.config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51014</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="~/Default.aspx" title="Home"  description="">
+
+
+    <siteMapNode url="~/Search/SeachForSpecificItem.aspx" title="In-Depth Search"  description="Search For Specific Item Number" >
+    </siteMapNode>
+    
+    <siteMapNode url="~/Inventory/Default.aspx" title="Inventory"  description="All About Inventory">
+      <siteMapNode url="~/Inventory/ScrAddEquipment.aspx" title="Add Equipment"  description="Add New Equipment Item to the System"/>
+      <siteMapNode url="~/Inventory/Delete/Default.aspx" title="Delete Equipment"  description="">
+        <siteMapNode url="~/Inventory/Delete/RemoveEquipment.aspx" title="Remove from System"  description=""/>
+        <siteMapNode url="~/Inventory/Delete/MarkDeleted.aspx" title="Mark as Deleted"  description=""/>
+        <siteMapNode url="~/Inventory/Delete/MarkSurplus.aspx" title="Mark as Surplus"  description=""/>
+      </siteMapNode>
+      <siteMapNode url="~/Inventory/ModifyEquipment.aspx" title="Modify Equipment Information"  description=""/>
+      <siteMapNode url="~/Inventory/MarkLSD.aspx" title="Mark as Lost, Stolen, Damaged"  description=""/>
+      <siteMapNode url="~/Inventory/AddCategory.aspx" title="Add Category"  description=""/>
+      <siteMapNode url="~/Inventory/ModifyCategory.aspx" title="Modify Category"  description=""/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Checkinouts/Default.aspx" title="Check-in/out"  description="">
+      <siteMapNode url="~/Checkinouts/Checkin.aspx" title="Check-in Equipment"  description=""/>
+      <siteMapNode url="~/Checkinouts/Checkout.aspx" title="Check-out Equipment"  description=""/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Holds/Default.aspx" title="Manage Holds"  description="">
+      <siteMapNode url="~/Holds/RemoveHold.aspx" title="Remove Holds"  description="" />
+      <siteMapNode url="~/Holds/ManageHolds.aspx" title="Approve/Deny Hold Requests"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="~/AccountManagement/Default.aspx" title="Account Management"  description="">
+      <siteMapNode url="~/AccountManagement/CreateAccount.aspx" title="Add User Account"  description="" />
+      <siteMapNode url="~/AccountManagement/ModifyUserAccount.aspx" title="Modify User Account"  description="" />
+      <siteMapNode url="~/AccountManagement/ChangePW.aspx" title="Change Password"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Reports/Default.aspx" title="Reports"  description="">
+      <siteMapNode url="~/Reports/EquipmentItemsReport.aspx" title="Equipment Items Report"  description="" />
+      <siteMapNode url="~/Reports/EquipmentHoldsReport.aspx" title="Equipment Holds Report"  description="" />
+      <siteMapNode url="~/Reports/EquipmentReportByDate.aspx" title="Equipment Report by Date"  description="" />
+      <siteMapNode url="~/Reports/StatisticalReport.aspx" title="Statistical Report"  description="" />
+    </siteMapNode>
+     
+    <siteMapNode url="~/Search.aspx" title="Request Items"  description="">  
+    </siteMapNode>
+    
+    <siteMapNode url="~/About.aspx" title="About"  description="All about the ATS Inventory Management System">
+    </siteMapNode>
+  </siteMapNode>
+
+</siteMap>

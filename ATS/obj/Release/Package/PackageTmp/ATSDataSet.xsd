@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ATSDataSet" targetNamespace="http://tempuri.org/ATSDataSet.xsd" xmlns:mstns="http://tempuri.org/ATSDataSet.xsd" xmlns="http://tempuri.org/ATSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ATSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ATSDataSet" msprop:Generator_UserDSName="ATSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EquipmentItemDataTable" msprop:Generator_TableClassName="EquipmentItemDataTableDataTable" msprop:Generator_TableVarName="tableEquipmentItemDataTable" msprop:Generator_TablePropName="EquipmentItemDataTable" msprop:Generator_RowDeletingName="EquipmentItemDataTableRowDeleting" msprop:Generator_UserTableName="EquipmentItemDataTable" msprop:Generator_RowChangingName="EquipmentItemDataTableRowChanging" msprop:Generator_RowEvHandlerName="EquipmentItemDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="EquipmentItemDataTableRowDeleted" msprop:Generator_RowEvArgName="EquipmentItemDataTableRowChangeEvent" msprop:Generator_RowChangedName="EquipmentItemDataTableRowChanged" msprop:Generator_RowClassName="EquipmentItemDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itemnumber" msprop:Generator_ColumnVarNameInTable="columnitemnumber" msprop:Generator_ColumnPropNameInRow="itemnumber" msprop:Generator_ColumnPropNameInTable="itemnumberColumn" msprop:Generator_UserColumnName="itemnumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="320" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dollarvalue" msprop:Generator_ColumnVarNameInTable="columndollarvalue" msprop:Generator_ColumnPropNameInRow="dollarvalue" msprop:Generator_ColumnPropNameInTable="dollarvalueColumn" msprop:Generator_UserColumnName="dollarvalue" type="xs:double" />
+              <xs:element name="category" msprop:Generator_ColumnVarNameInTable="columncategory" msprop:Generator_ColumnPropNameInRow="category" msprop:Generator_ColumnPropNameInTable="categoryColumn" msprop:Generator_UserColumnName="category" type="xs:string" minOccurs="0" />
+              <xs:element name="keywords" msprop:Generator_ColumnVarNameInTable="columnkeywords" msprop:Generator_ColumnPropNameInRow="keywords" msprop:Generator_ColumnPropNameInTable="keywordsColumn" msprop:Generator_UserColumnName="keywords" type="xs:string" minOccurs="0" />
+              <xs:element name="checkoutlength" msprop:Generator_ColumnVarNameInTable="columncheckoutlength" msprop:Generator_ColumnPropNameInRow="checkoutlength" msprop:Generator_ColumnPropNameInTable="checkoutlengthColumn" msprop:Generator_UserColumnName="checkoutlength" type="xs:int" minOccurs="0" />
+              <xs:element name="comments" msprop:Generator_ColumnVarNameInTable="columncomments" msprop:Generator_ColumnPropNameInRow="comments" msprop:Generator_ColumnPropNameInTable="commentsColumn" msprop:Generator_UserColumnName="comments" type="xs:string" minOccurs="0" />
+              <xs:element name="entrydate" msprop:Generator_ColumnVarNameInTable="columnentrydate" msprop:Generator_ColumnPropNameInRow="entrydate" msprop:Generator_ColumnPropNameInTable="entrydateColumn" msprop:Generator_UserColumnName="entrydate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lost" msprop:Generator_ColumnVarNameInTable="columnlost" msprop:Generator_ColumnPropNameInRow="lost" msprop:Generator_ColumnPropNameInTable="lostColumn" msprop:Generator_UserColumnName="lost" type="xs:boolean" minOccurs="0" />
+              <xs:element name="damaged" msprop:Generator_ColumnVarNameInTable="columndamaged" msprop:Generator_ColumnPropNameInRow="damaged" msprop:Generator_ColumnPropNameInTable="damagedColumn" msprop:Generator_UserColumnName="damaged" type="xs:boolean" minOccurs="0" />
+              <xs:element name="stolen" msprop:Generator_ColumnVarNameInTable="columnstolen" msprop:Generator_ColumnPropNameInRow="stolen" msprop:Generator_ColumnPropNameInTable="stolenColumn" msprop:Generator_UserColumnName="stolen" type="xs:boolean" minOccurs="0" />
+              <xs:element name="visible" msprop:Generator_ColumnVarNameInTable="columnvisible" msprop:Generator_ColumnPropNameInRow="visible" msprop:Generator_ColumnPropNameInTable="visibleColumn" msprop:Generator_UserColumnName="visible" type="xs:boolean" minOccurs="0" />
+              <xs:element name="senttosurplus" msprop:Generator_ColumnVarNameInTable="columnsenttosurplus" msprop:Generator_ColumnPropNameInRow="senttosurplus" msprop:Generator_ColumnPropNameInTable="senttosurplusColumn" msprop:Generator_UserColumnName="senttosurplus" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EquipmentItemDataTable" />
+      <xs:field xpath="mstns:itemnumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
